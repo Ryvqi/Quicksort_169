@@ -34,8 +34,10 @@ void swap(int x, int y)
 {
 	int temp;
 	temp = arr[y];
+	arr[x] = arr[y];
 	arr[y] = temp;
 }
+void q_short
 int main()
 {
 
