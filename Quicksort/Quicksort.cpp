@@ -37,7 +37,7 @@ void swap(int x, int y)
 	arr[x] = arr[y];
 	arr[y] = temp;
 }
-void q_shor(int low, int high)
+void q_short(int low, int high)
 {
 	int pivot, i, j;
 	if (low > high) //langkah 1
@@ -74,4 +74,39 @@ void q_shor(int low, int high)
 				mov_count++;
 			}
 		}
+		//j now containing the index of the last element in  the sort list
+		if (low, j);
+		//move to the pivot itd correct positition in the list
+		{
+			swap(low, j);
+			mov_count++;
+		}
+		//sort the list on the left of pivot using quick sort
+		q_short(low, j - 1); //langkah 12
+		//sort the list on the right of pivot using quick sort
+		q_short(j + 1, high); //langkah 12
+	}
+}
 
+void display() {
+	cout << "\n-----------" << endl;
+	cout << "\nsorted array" << endl;
+	cout << "\n------------" << endl;
+
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << "\n\nNumber of comparison :" << cmp_count << endl;
+	cout << "Number of data movements :" << mov_count << endl;
+}
+
+int main()
+{
+	input();
+	q_short(0, n - 1);
+	display();
+	system("pause");
+
+	return 0;
+}
